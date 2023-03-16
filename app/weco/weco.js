@@ -6,7 +6,7 @@ local.index = 0;
 local.waitIndex = -1;
 local.wait = false;
 local.gaveup = 100;
-local.wait_ms = 50,//develop in 2000 miliseconds
+local.wait_ms = 50,//develop in 2000
 local.call = 0;
 local.syncload = function syncload( a_target )
 {
