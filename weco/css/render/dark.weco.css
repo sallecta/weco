@@ -1,0 +1,87 @@
+/*
+https://www.npmjs.com/package/highlight.js/v/9.18.1?activeTab=explore
+styles/color-brewer.css
+
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.weco {
+  display: block;
+  overflow-x: auto;
+  line-height:1.5em;
+  padding: 0.5em;
+  background: #262625;
+}
+
+.weco,
+.weco-tag,
+.weco-subst {
+  color: #f8f8f2;
+}
+
+.weco-strong,
+.weco-emphasis {
+  color: #a8a8a2;
+}
+
+.weco-bullet,
+.weco-quote,
+.weco-number,
+.weco-regexp,
+.weco-literal,
+.weco-link {
+  color: #ae81ff;
+}
+
+.weco-code,
+.weco-title,
+.weco-section,
+.weco-selector-class {
+  color: #a6e22e;
+}
+
+.weco-strong {
+  font-weight: bold;
+}
+
+.weco-emphasis {
+  font-style: italic;
+}
+
+.weco-keyword,
+.weco-selector-tag,
+.weco-name,
+.weco-attr {
+  color: #f92672;
+}
+
+.weco-symbol,
+.weco-attribute {
+  color: #66d9ef;
+}
+
+.weco-params,
+.weco-class .weco-title {
+  color: #f8f8f2;
+}
+
+.weco-string,
+.weco-type,
+.weco-built_in,
+.weco-builtin-name,
+.weco-selector-id,
+.weco-selector-attr,
+.weco-selector-pseudo,
+.weco-addition,
+.weco-variable,
+.weco-template-variable {
+  color: #e6db74;
+}
+
+.weco-comment,
+.weco-deletion,
+.weco-meta {
+  color: #75715e;
+}

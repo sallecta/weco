@@ -1,0 +1,77 @@
+/*
+ https://www.npmjs.com/package/highlight.js/v/9.18.1?activeTab=explore
+styles/color-brewer.css
+ */
+/*
+
+Colorbrewer theme
+Original: https://github.com/mbostock/colorbrewer-theme (c) Mike Bostock <mike@ocks.org>
+Ported by FabrÃ­cio Tavares de Oliveira
+
+*/
+
+.weco {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fff;
+  line-height:1.5em;
+  padding: 0.5em;
+}
+
+.weco,
+.weco-subst {
+  color: #000;
+}
+
+.weco-string,
+.weco-meta,
+.weco-symbol,
+.weco-template-tag,
+.weco-template-variable,
+.weco-addition {
+  color: #756bb1;
+}
+
+.weco-comment,
+.weco-quote {
+  color: #636363;
+}
+
+.weco-number,
+.weco-regexp,
+.weco-literal,
+.weco-bullet,
+.weco-link {
+  color: #31a354;
+}
+
+.weco-deletion,
+.weco-variable {
+  color: #88f;
+}
+
+
+
+.weco-keyword,
+.weco-selector-tag,
+.weco-title,
+.weco-section,
+.weco-built_in,
+.weco-doctag,
+.weco-type,
+.weco-tag,
+.weco-name,
+.weco-selector-id,
+.weco-selector-class,
+.weco-strong {
+  color: #3182bd;
+}
+
+.weco-emphasis {
+  font-style: italic;
+}
+
+.weco-attribute {
+  color: #e6550d;
+}
