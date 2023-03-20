@@ -891,6 +891,7 @@ function(factory)
 		}
 		arg_el.style.lineHeight = '1.5em';
 		arg_el.style.padding = '0.5em';
+		arg_el.style.paddingLeft = '2.5em';
 	}
 
 	function configure(user_options) {

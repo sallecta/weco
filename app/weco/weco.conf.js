@@ -7,7 +7,14 @@ const render_fn = function(){
 const link_el = document.createElement("link")
 link_el.rel = "stylesheet"
 document.head.appendChild(link_el)
-link_el.href = `weco/css/render/dark.weco.css`
+if (weco.root)
+{
+	link_el.href = weco.root+'/weco/css/render/dark.weco.css';
+}
+else
+{
+	link_el.href = 'weco/css/render/dark.weco.css';
+}
 
 const weco_el = document.querySelector(".weco");
 

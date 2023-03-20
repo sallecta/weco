@@ -6,7 +6,7 @@ local.index = 0;
 local.waitIndex = -1;
 local.wait = false;
 local.gaveup = 100;
-local.wait_ms = 50,//develop in 2000
+local.wait_ms = 5,//develop in 2000
 local.call = 0;
 local.syncload = function syncload( a_target )
 {
@@ -121,6 +121,7 @@ weco.meta={};
 weco.meta.name = 'weco';
 weco.meta.version = '0.0.0';
 weco.load = local.load;
+weco.root = '';
 //console.log(this);
 	
 	
@@ -152,6 +153,22 @@ if (typeof wecoinline !== 'undefined')
 else
 {
 	weco.args[weco.args.length]={link:'weco/weco.conf.js'};
+}
+if (typeof wecoinline !== 'undefined')
+{
+	if (wecoinline.root)
+	{
+		//console.log('wecoinline.root');
+		weco.root= wecoinline.root;
+		var i = 0;
+		while (i < weco.args.length)
+		{
+			weco.args[i].link = weco.root+'/'+weco.args[i].link;
+			//console.log('wecoinline.root: link: '+weco.args[i].link);
+			i++;
+		}
+
+	}
 }
 weco.load(weco.args);
 console.log(this);

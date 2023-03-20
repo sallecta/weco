@@ -5,7 +5,7 @@ weco.linenubers = function linenubers(arg_func, arg_options = {}) {
 	const opts = Object.assign({
 		wrapClass: "weco-render-linenumbers",
 		class: "linenumbers",
-		width: "35px",
+		width: "1.5em",
 		backgroundColor: 'rgba(0, 0, 0, 0.55)',
 		color: "rgba(253, 253, 253, 0.54)",
 		lineHeight:"1.5em",
