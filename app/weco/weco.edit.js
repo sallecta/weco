@@ -5,7 +5,7 @@ https://www.npmjs.com/package/codejar/v/3.7.0?activeTab=explore
  */
 //const globalWindow = window;
 weco.edit = function edit(arg_el, arg_render, arg_opt = {}) {
-	console.log('called');
+	//console.log('called');
 	const options = Object.assign({
 		tab: '\t',
 		indentOn: /[({\[]$/,
@@ -32,7 +32,7 @@ weco.edit = function edit(arg_el, arg_render, arg_opt = {}) {
 	arg_el.style.overflowY = 'auto';
 	arg_el.style.whiteSpace = 'pre-wrap';
 	let isLegacy = false; // true if plaintext-only is not supported
-	console.log('rendering');
+	//console.log('rendering');
 	arg_render(arg_el);
 	if (arg_el.contentEditable !== 'plaintext-only')
 		isLegacy = true;
@@ -246,7 +246,12 @@ weco.edit = function edit(arg_el, arg_render, arg_opt = {}) {
 	}
 
 	function handleNewLine(event) {
-		if (event.key === 'Enter') {
+		// submit on ctrl enter
+		if (event.key === "Enter" && (event.metaKey || event.ctrlKey))
+		{ //https://gist.github.com/KacperKozak/9736160#file-ctrl-enter-js
+			weco.submit();
+		}
+		else if (event.key === 'Enter') {
 			const before = beforeCursor();
 			const after = afterCursor();
 			let [padding] = findPadding(before);

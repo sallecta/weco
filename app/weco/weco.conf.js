@@ -16,9 +16,15 @@ else
 	link_el.href = 'weco/css/render/dark.weco.css';
 }
 
-const weco_el = document.querySelector(".weco");
+for (const [key, weco_el] of Object.entries(weco.els))
+{
+	//console.log([key,weco_el]);
+	const wecoe = weco.edit(weco_el, weco.linenubers(weco.render.block));
+}
 
-const wecoe = weco.edit(weco_el, weco.linenubers(weco.render.block));
+//const weco_el = document.querySelector(".weco");
+
+//const wecoe = weco.edit(weco_el, weco.linenubers(weco.render.block));
 
 
 

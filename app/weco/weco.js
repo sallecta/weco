@@ -116,12 +116,51 @@ local.create = function create(a_target)
 }
 /* end local */
 
+const local2 = {};
+local2.formSubmit = function( a_elid )
+{
+	event.preventDefault();
+	if ( a_elid ) // called by other els
+	{
+		console.log(['a_elid=',a_elid]);
+		var el = document.querySelector('#'+a_elid);
+	}
+	else
+	{
+		var el = event.target; // called by weco el
+	}
+	console.log(el);
+	var myform = document.forms[el.dataset.form];// get el's form
+	if ( myform )
+	{
+		if ( !myform.querySelector('input[name='+el.id+']') )
+		{
+			console.log('no');
+			var input = document.createElement("input");
+			input.setAttribute("type", "hidden");
+			input.setAttribute("name", el.id);
+			myform.appendChild(input);
+		}
+		else
+		{
+			console.log('yes');
+			var input = myform.querySelector('input[name='+el.id+']');
+		}
+		input.setAttribute("value", el.textContent);
+		console.log(input.value);
+		myform.submit();
+	}
+}
+/* end local2 */
+
 weco ={};
 weco.meta={};
 weco.meta.name = 'weco';
 weco.meta.version = '0.0.0';
 weco.load = local.load;
 weco.root = '';
+weco.submit = local2.formSubmit;
+weco.els = document.querySelectorAll('.weco');
 //console.log(this);
 	
 	
@@ -171,4 +210,4 @@ if (typeof wecoinline !== 'undefined')
 	}
 }
 weco.load(weco.args);
-console.log(this);
+//console.log(this);
