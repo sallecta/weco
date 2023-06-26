@@ -46,7 +46,18 @@ NOWDOC;
 	{
 		$vv=&self::$vv;
 		ob_start();
+		try
+		{
 			eval($_POST['code']);
+		}
+		catch (ParseError $err)
+		{
+			echo $err;
+		}
+		catch (\Throwable $err)
+		{
+			echo $err;
+		}
 		$output = ob_get_contents();
 		ob_end_clean();
 		return $output;
